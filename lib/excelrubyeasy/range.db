@@ -1,0 +1,86 @@
+require 'uri'
+require 'json'
+
+module ExcelRubyEasy
+  module Model
+	class Chart 
+
+		attr_accessor :address, 
+					:addressLocal, 
+					:cellCount,
+					:columnCount,
+					:columnIndex,
+					:formulas
+					:formulasLocal,
+					:numberFormat, 
+					:rowCount, 
+					:rowIndex, 
+					:text, 
+					:values, 
+					:valueTypes
+
+		def initialize (parms={}) 
+			@address = parms[:address]
+			@addressLocal = parms[:addressLocal]
+			@cellCount = parms[:cellCount]
+			@columnCount = parms[:columnCount]
+			@columnIndex = parms[:columnIndex]
+			@formulas = parms[:formulas]
+			@formulasLocal = parms[:formulasLocal]
+			@numberFormat = parms[:numberFormat]
+			@rowCount = parms[:rowCount]
+			@rowIndex = parms[:rowIndex]
+			@text = parms[:text]
+			@values = parms[:values]
+			@valueTypes = parms[:valueTypes]
+		
+		end
+
+		def sync()
+			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      	
+			uri = URI.parse(ExcelRubyEasy::EXCEL_SERVER+"Worksheets('#{URI.escape @address.split('!').first}')/Range('#{@address}')")
+	        headers = {"Content-Type" => "application/x-www-form-urlencoded", "Accept" => "application/json", }
+	        parms = {
+				formulas: @formulas,
+				formulasLocal: @formulasLocal,
+				numberFormat:  @numberFormat,
+				values: @values,
+	        }
+	        request = Net::HTTP::Patch.new(uri.request_uri, headers)
+	        response = ExcelRubyEasy::HttpAction::http_sync_with_body(uri, request, parms.to_json)
+	        j = JSON.parse(response.body, {:symbolize_names => true}) 
+			@address = j[:address]
+			@addressLocal = j[:addressLocal]
+			@cellCount = j[:cellCount]
+			@columnCount = j[:columnCount]
+			@columnIndex = j[:columnIndex]
+			@formulas = j[:formulas]
+			@formulasLocal = j[:formulasLocal]
+			@numberFormat = j[:numberFormat]
+			@rowCount = j[:rowCount]
+			@rowIndex = j[:rowIndex]
+			@text = j[:text]
+			@values = j[:values]
+			@valueTypes = j[:valueTypes]
+	     	return self
+		end
+
+		def delete(shift=nil)
+			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      		      	
+			uri = URI.parse(ExcelRubyEasy::EXCEL_SERVER+"Worksheets('#{URI.escape @address.split('!').first}')/Range('#{@address}')/Delete")
+	        headers = {"Content-Type" => "application/x-www-form-urlencoded", "Accept" => "application/json", }
+	        parms = {
+	        	shift: shift
+	        }	        
+	        request = Net::HTTP::Post.new(uri.request_uri, headers)
+	        response = ExcelRubyEasy::HttpAction::http_sync_with_body(uri, request, parms.to_json)
+	     	if response.kind_of? Net::HTTPSuccess
+	        	true
+	        else
+	        	false
+	        end
+		end
+
+	endo
+  end
+end

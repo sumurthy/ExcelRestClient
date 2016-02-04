@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Excel REST Testing Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Excel REST Testing App</h3>
+      </div>
+
+      <h3><span class="label label-primary">Add chart</span></h3>
+      <% if !worksheetid.nil? && !worksheetid.empty? %>
+        <div class="alert alert-info" role="alert">Adding in worksheet id: <%= worksheetid %> </div>
+      <% end %>
+
+      <form class="navbar-form navbar-left" method="post" action="/addchartroute">
+          <div class="form-group">
+           <input type="text" name="sourcedata" class="form-control" placeholder="Range Address, required">
+           <select  name="seriesby" class="form-control" >
+			  <option value="Auto" selected="selected">Auto</option>
+			  <option value="Columns">Columns</option>
+			  <option value="Rows">Rows</option>			
+		   </select>
+			<select  name="type" class="form-control" >
+			  <option value="ColumnClustered" selected="selected">ColumnClustered</option>
+			  <option value="ColumnStacked">ColumnStacked</option>
+			  <option value="ColumnStacked100">ColumnStacked100</option>
+			  <option value="_3DColumnClustered">_3DColumnClustered</option>
+			  <option value="_3DColumnStacked">_3DColumnStacked</option>
+			  <option value="_3DColumnStacked100">_3DColumnStacked100</option>
+			  <option value="BarClustered">BarClustered</option>
+			  <option value="BarStacked">BarStacked</option>
+			  <option value="BarStacked100">BarStacked100</option>
+			  <option value="_3DBarClustered">_3DBarClustered</option>
+			  <option value="_3DBarStacked">_3DBarStacked</option>
+			  <option value="_3DBarStacked100">_3DBarStacked100</option>
+			  <option value="LineStacked">LineStacked</option>
+			  <option value="LineStacked100">LineStacked100</option>
+			  <option value="LineMarkers">LineMarkers</option>
+			  <option value="LineMarkersStacked">LineMarkersStacked</option>
+			  <option value="LineMarkersStacked100">LineMarkersStacked100</option>
+			  <option value="PieOfPie">PieOfPie</option>
+			  <option value="PieExploded">PieExploded</option>
+			  <option value="_3DPieExploded">_3DPieExploded</option>
+			  <option value="BarOfPie">BarOfPie</option>
+			  <option value="XYScatterSmooth">XYScatterSmooth</option>
+			  <option value="XYScatterSmoothNoMarkers">XYScatterSmoothNoMarkers</option>
+			  <option value="XYScatterLines">XYScatterLines</option>
+			  <option value="XYScatterLinesNoMarkers">XYScatterLinesNoMarkers</option>
+			  <option value="AreaStacked">AreaStacked</option>
+			  <option value="AreaStacked100">AreaStacked100</option>
+			  <option value="_3DAreaStacked">_3DAreaStacked</option>
+			  <option value="_3DAreaStacked100">_3DAreaStacked100</option>
+			  <option value="DoughnutExploded">DoughnutExploded</option>
+			  <option value="RadarMarkers">RadarMarkers</option>
+			  <option value="RadarFilled">RadarFilled</option>
+			  <option value="Surface">Surface</option>
+			  <option value="SurfaceWireframe">SurfaceWireframe</option>
+			  <option value="SurfaceTopView">SurfaceTopView</option>
+			  <option value="SurfaceTopViewWireframe">SurfaceTopViewWireframe</option>
+			  <option value="Bubble">Bubble</option>
+			  <option value="Bubble3DEffect">Bubble3DEffect</option>
+			  <option value="StockHLC">StockHLC</option>
+			  <option value="StockOHLC">StockOHLC</option>
+			  <option value="StockVHLC">StockVHLC</option>
+			  <option value="StockVOHLC">StockVOHLC</option>
+			  <option value="CylinderColClustered">CylinderColClustered</option>
+			  <option value="CylinderColStacked">CylinderColStacked</option>
+			  <option value="CylinderColStacked100">CylinderColStacked100</option>
+			  <option value="CylinderBarClustered">CylinderBarClustered</option>
+			  <option value="CylinderBarStacked">CylinderBarStacked</option>
+			  <option value="CylinderBarStacked100">CylinderBarStacked100</option>
+			  <option value="CylinderCol">CylinderCol</option>
+			  <option value="ConeColClustered">ConeColClustered</option>
+			  <option value="ConeColStacked">ConeColStacked</option>
+			  <option value="ConeColStacked100">ConeColStacked100</option>
+			  <option value="ConeBarClustered">ConeBarClustered</option>
+			  <option value="ConeBarStacked">ConeBarStacked</option>
+			  <option value="ConeBarStacked100">ConeBarStacked100</option>
+			  <option value="ConeCol">ConeCol</option>
+			  <option value="PyramidColClustered">PyramidColClustered</option>
+			  <option value="PyramidColStacked">PyramidColStacked</option>
+			  <option value="PyramidColStacked100">PyramidColStacked100</option>
+			  <option value="PyramidBarClustered">PyramidBarClustered</option>
+			  <option value="PyramidBarStacked">PyramidBarStacked</option>
+			  <option value="PyramidBarStacked100">PyramidBarStacked100</option>
+			  <option value="PyramidCol">PyramidCol</option>
+			  <option value="_3DColumn">_3DColumn</option>
+			  <option value="Line">Line</option>
+			  <option value="_3DLine">_3DLine</option>
+			  <option value="_3DPie">_3DPie</option>
+			  <option value="Pie">Pie</option>
+			  <option value="XYScatter">XYScatter</option>
+			  <option value="_3DArea">_3DArea</option>
+			  <option value="Area">Area</option>
+			  <option value="Doughnut">Doughnut</option>
+			  <option value="Radar">Radar</option>
+			</select>           
+
+           <input type="hidden" name="id" value="<%= worksheetid %>">
+          </div>
+          <br/><br/><br/>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div> <!-- /container -->
+  <div class="container"/>
+  
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
