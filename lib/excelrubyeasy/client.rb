@@ -49,7 +49,7 @@ class Client
             "client_id" => @client_id,
             "response_type" => "code",
             "redirect_uri" => @redirect_uri,
-            "prompt" => "admin_consent"
+            "prompt" => "consent"
         }
         auth_uri = URI::Generic.new("https", nil, @auth_url, nil, nil, "authorize", 
         							 nil, nil, nil)
@@ -199,7 +199,7 @@ class Client
 	def add_table(rangeAddress=nil, hasHeaders=true) 
 		ExcelRubyEasy::logger.debug "D, #{__method__.to_s}, rangeAddress = #{rangeAddress} "
 
-		uri = URI.parse(ExcelRubyEasy::Client.excelserver+'Tables')
+		uri = URI.parse(ExcelRubyEasy::Client.excelserver+'Tables/$/Add')
 		parms = {
 			address: rangeAddress,
 			hasHeaders: hasHeaders

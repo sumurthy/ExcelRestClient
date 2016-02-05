@@ -37,7 +37,7 @@
             <li role="presentation" class="active"><a href="/">Home</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Excel REST Testing App</h3>
+        <h3 class="text-muted">Microsoft Excel REST Graph API Explorer</h3>
       </div>
 
 
@@ -59,7 +59,7 @@
             <tr>
                <th scope="row"><%= i %></th> 
                <td><%= row[:name] %></td>
-               <td><%= row[:size].size.to_s %></td>
+               <td><%= row[:size].to_s %></td>
                <td><a href="/setexcelfile?id=<%= row[:id] %>"><i>Go</i></a></td>
             </tr>
           <% end %>
