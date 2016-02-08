@@ -8,13 +8,14 @@ logger = Logger.new(STDOUT)
 logger.level = Logger::DEBUG  
 
 SESSION = {
-	client_id: "",
-    redirect_uri: "http://localhost:4567/signon",
-	secret: "",
-	auth_url: "login.windows.net/common/oauth2/",
-	resource: "https://graph.microsoft.com",
-	persist_changes: true
-	}
+        client_id: "dad4b481-a6b7-4cfd-9117-32eed770d4b1",
+        redirect_uri: "http://localhost:4567/signon",
+        secret: "AGCifRyMSOMNQr5n36Kb9Pzh0U4oR8cfKQwjXv39ip0=",
+        auth_url: "login.windows.net/common/oauth2/",
+        resource: "https://graph.microsoft.com",
+        persist_changes: true
+        }
+
 
 client = ExcelRubyEasy::Client.new (SESSION)
 auth_url = client.get_authurl
@@ -79,7 +80,7 @@ get '/listworksheettables' do
 end
 
 get '/listtablerows' do 
-	begin
+	# begin
 		@@table = client.get_table(nil, params[:tablename])
 		@@rows = @@table.rows
 		saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE_LIST
@@ -90,13 +91,13 @@ get '/listtablerows' do
 			:rr => saveRR
 		}
 
-	rescue
-		saveRR = ExcelRubyEasy::REQUEST_RESPONSE		
-		erb :index, :locals => {:status => "Error-Fetching-Table-Rows: #{params[:tablename]}",
-								:htrace => "ok",
-								:rr => saveRR
-							   }	
-	end	
+	# rescue
+	# 	saveRR = ExcelRubyEasy::REQUEST_RESPONSE		
+	# 	erb :index, :locals => {:status => "Error-Fetching-Table-Rows: #{params[:tablename]}",
+	# 							:htrace => "ok",
+	# 							:rr => saveRR
+	# 						   }	
+	# end	
 
 end
 
@@ -146,7 +147,6 @@ get '/showtablecolumnrangeinfo' do
 			:databodyrange =>  @@databodyrange,
 			:headerrowrange => @@headerrowrange,
 			:totalrowrange => @@totalrowrange,
-			:rr => saveRR,
 			:htrace => "ok",
 			:rr => saveRR			
 		}

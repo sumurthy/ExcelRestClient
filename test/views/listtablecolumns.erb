@@ -56,6 +56,12 @@
 
 	  <% if columns.size > 0 %>
 
+        <%= "<tr>" %>
+          <% columns.length.times  do |col| %>
+                <%=  "<th> <i> Col-#{col} </i> </th>" %>
+          <% end %>
+        <%= "</tr>" %>
+
 				<%= "<tr>" %>
 				  <% columns.length.times  do |col| %>
 				  			<td><a href="/showtablecolumnrangeinfo?tablename=<%= table.name %>&amp;id=<%= columns[col].id %>"><i>Get Range Info</i></a></td>
