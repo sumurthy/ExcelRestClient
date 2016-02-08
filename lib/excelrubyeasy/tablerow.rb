@@ -43,7 +43,7 @@ module ExcelRubyEasy
 		def delete
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      		      	
 			uri = URI.parse(ExcelRubyEasy::Client.excelserver+"Tables('#{@tableId}')/Rows/$/ItemAt(index=#{@index})")
-	        request = Net::HTTP::Post.new(uri.request_uri, ExcelRubyEasy::HEADERS_DELETE)
+	        request = Net::HTTP::Delete.new(uri.request_uri, ExcelRubyEasy::HEADERS_DELETE)
 	        response = ExcelRubyEasy::HttpAction::do_http(uri, request)	        
 	     	if response.kind_of? Net::HTTPSuccess
 	        	true

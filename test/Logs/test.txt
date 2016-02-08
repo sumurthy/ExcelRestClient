@@ -1,111 +1,24 @@
-# Logfile created on 2016-02-08 10:22:00 -0800 by logger.rb/44203
-D, [2016-02-08T10:22:02.258869 #18824] DEBUG -- : D, get_authurl
-D, [2016-02-08T10:22:02.258869 #18824] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
-D, [2016-02-08T10:22:22.132766 #18824] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLZ0Q_R2f9Gly0fHxacJAFVxx9VBgK_egBqpSnc0lAy-tuPjFHyxWsPRnIiS1r2msv6BxpZUv-B0IclIxewd84Z8bUkRbbHpFmSpEfEYG-xaFomrjOK4f6TKwrCgUyuMbMdbFUZN2UrdgiUSuFqxwzTsFI4K_QILSVBRLiSb5c7pKKiuJKyQsP4cNxj5RH5lMxHrH42rrgn7naKIWGFPLXhdrXe7s_ckJCnBfZQC7thmi980Tjh-zVPuGDa23SXrhvDW-iZq3D1Jf4z8Rt-KMNjfPjlryUfrKpk3EdqyFDMGKYlfH8-ScHtYG5Z1_Nve1Ywv-ZuM_xOuPUK757bPHbvpeKGF_f9zzasbE-K_uYwvT1Z_oyQZu2PrHI0Vnzq4ALSIbTfFwHM4cVAWEaGmB7Tc6vJHsV6oauSotYSu0lKSHDTyE8rjZFAcoeUowTQvJRC_yWILgFq2yX16B6waeaUte_pA_fx-S_7y0vOoF7f03eFvxQ9y7Z6XfnufSjF_PiD3AYq8tLmlrIU_oSs8-vjwo23uj3i4YIHZ_YYWgraJds9jkl9gh-ExHMe8T-hjNEvAbrK8LKaOPSufbQs3TTgIgAA 
-D, [2016-02-08T10:22:22.155030 #18824] DEBUG -- : D, 1) calling auth token 
-D, [2016-02-08T10:22:22.155530 #18824] DEBUG -- : D, http_sync_with_body
-D, [2016-02-08T10:22:22.155530 #18824] DEBUG -- : D, http_sync_with_body
-D, [2016-02-08T10:22:22.156029 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:22.803965 #18824] DEBUG -- : D, 2) ending auth token 
-D, [2016-02-08T10:22:22.803965 #18824] DEBUG -- : D,Returning 
-D, [2016-02-08T10:22:22.804464 #18824] DEBUG -- : D, search_for_excelfiles
-D, [2016-02-08T10:22:22.804464 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:22:22.804964 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:28.278413 #18824] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLfBNWaCzGcyd42B6leurLb_-YN92aKY1MxReASBMeqXtCF4_c9YTvHSgbSuJq1QBOddlW_AvfAQXRFOsliIGMoQThzKbAC5ZYdj4vbTzOAgoPWUWkxsYKV2iiuM3S4iwr5ux_Uybmdh8M2pdzAh61nnPdhzpuAuuH4Iiu9PfpaDEFJ_trb8QxayjID_4Ck1fvLoMqSAddqX87PNx6jz_fyptBuOh6DysFVtEAFWOohAphbX2AKRsoxgCxoM0WAPl5KCFp97vYyVInHbbL2uyIzMEmDkSMMz1P1BrsfhENEN2TwRbZRBFw7Q056_PjcrYmJwGJRJHYFfK3e9OvsOD8zfbp48Jd7HBRInDYkI7sLl7IDTOd5jHle122lvfs3AT3qkYslRCbiJGgP0QYJEtgDG-H2CuL32ZVV0Osbt3gsGJ_3r5Z8mCdAgGh72qDmFW2M7668ThaRX84m3szQ9_7P7jU0pAy3QTVHQnHenIWXL3faiPOjGvgOgSrL2ctzhCJX3uxN9ww-MteNuCJLm0KCnr8bGDJznJ9aqTvqplhrUwAn_5rMDq0TwAjsK9cAPPGLhvnUyCYEwMevFYMkNCXi4gAA 
-D, [2016-02-08T10:22:28.350041 #18824] DEBUG -- : D, 1) calling auth token 
-D, [2016-02-08T10:22:28.350393 #18824] DEBUG -- : D, http_sync_with_body
-D, [2016-02-08T10:22:28.350393 #18824] DEBUG -- : D, http_sync_with_body
-D, [2016-02-08T10:22:28.350931 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:29.024650 #18824] DEBUG -- : D, 2) ending auth token 
-D, [2016-02-08T10:22:29.025152 #18824] DEBUG -- : D,Returning 
-D, [2016-02-08T10:22:29.025152 #18824] DEBUG -- : D, search_for_excelfiles
-D, [2016-02-08T10:22:29.025152 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:22:29.025152 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:34.727149 #18824] DEBUG -- : D, set_excelfile_and_session
-D, [2016-02-08T10:22:50.752224 #18824] DEBUG -- : D, list_objects
-D, [2016-02-08T10:22:50.752727 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:22:50.752727 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:53.212206 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:22:53.212704 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:22:53.212704 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:57.122639 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:22:57.122639 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:22:57.122639 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:22:59.401375 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:22:59.401375 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:22:59.401375 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:23:03.564059 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:23:03.564559 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:23:03.564559 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:23:08.908163 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:23:08.908664 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:23:08.909163 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:23:11.248476 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:23:11.248476 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:23:13.207308 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:23:13.207308 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:23:13.207806 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:25:38.352585 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:25:38.353084 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:25:38.353084 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:25:40.903161 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:25:40.903661 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:25:43.078900 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:25:43.079401 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:25:43.079401 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:27:36.422624 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:27:36.422624 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:27:36.423125 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:27:41.638336 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:27:41.638835 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:27:43.333133 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:27:43.333634 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:27:43.333634 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:28:24.590309 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:28:24.590806 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:28:24.590916 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:28:28.282353 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:28:28.282853 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:28:29.875716 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:28:29.875716 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:28:29.876216 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:29:00.737044 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:29:00.737044 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:29:00.737542 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:29:04.568570 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:29:04.569070 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:29:06.288400 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:29:06.288400 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:29:06.288901 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:29:32.583968 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:29:32.584470 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:29:32.584470 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:29:34.332291 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:29:34.332291 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:29:36.526324 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:29:36.526324 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:29:36.526324 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:30:21.103296 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:30:21.103296 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:30:21.103806 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:30:25.429860 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:30:25.429860 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:30:27.381956 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:30:27.382440 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:30:27.382440 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:33:56.594059 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:33:56.594059 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:33:56.594059 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:33:59.319715 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:33:59.319715 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:34:02.104767 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:34:02.104767 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:34:02.104767 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:35:06.690995 #18824] DEBUG -- : D, get_table
-D, [2016-02-08T10:35:06.691495 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:35:06.691495 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:35:09.652903 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:35:09.654398 #18824] DEBUG -- : D, do_http
-D, [2016-02-08T10:35:12.271879 #18824] DEBUG -- : D, get_range
-D, [2016-02-08T10:35:12.271879 #18824] DEBUG -- : D, doGetRequest
-D, [2016-02-08T10:35:12.271879 #18824] DEBUG -- : D, do_http
+# Logfile created on 2016-02-08 11:04:51 -0800 by logger.rb/44203
+D, [2016-02-08T11:04:52.882313 #19696] DEBUG -- : D, get_authurl
+D, [2016-02-08T11:04:52.882815 #19696] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
+D, [2016-02-08T11:05:09.642249 #19696] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLQbIiamqbOPvITqy5QmAxOm_CX6AxtJJTSYr8k4qq1Uo92IX-Rfb6-AkhMFWqIUdKJQFbiX6cx-tm1lC7w2ONihsndw8791ZgwlyAoQrftQlwU9m0LWKI25tPd7xZKK7x6gScpBT_exR47Zn086m-c97FyQEnVuCOI1tw0fVEvxLG3Y_s5BvhFnRLOcLoQ__AF9NA6znftTJ4YyHouXW_HrB3EVw64PhvwwhXHIJlGirynNwqh0Vz1nGS2n272oSeBlWovMLduigQ3CFvNMk-pYjjUYswkqFZqmZU7aLHyGL_rzyrW90_3yEk4_5bCo4N7yGqAOZWhhTAnjTbYBHB87-MlWNjCgZbCtsoazReogZChhqoRHGh5OfIW6tebdNYePRMjrtSIdAAhM6e4WM6uWLeb0fJLShvSVMV2_XGfoyNt001eaZWg7bFuE8FhdESq-sQakgbARxcsIvZVOTPYtEwyBJ_kPqnCcf1A0s3ftjPODAW5UqxSxTGcj6zpI7TEkGVJyISpr3xEqoO8hJAotSMYWX2OW64sXuEwmIvgGws2URGcs-x1dm53aV84Cf5_hnJ0th3r0ndu5a3mt6PGIgAA 
+D, [2016-02-08T11:05:09.661057 #19696] DEBUG -- : D, 1) calling auth token 
+D, [2016-02-08T11:05:09.661057 #19696] DEBUG -- : D, http_sync_with_body
+D, [2016-02-08T11:05:09.661057 #19696] DEBUG -- : D, http_sync_with_body
+D, [2016-02-08T11:05:09.661057 #19696] DEBUG -- : D, do_http
+D, [2016-02-08T11:05:10.330089 #19696] DEBUG -- : D, 2) ending auth token 
+D, [2016-02-08T11:05:10.330089 #19696] DEBUG -- : D,Returning 
+D, [2016-02-08T11:05:10.330588 #19696] DEBUG -- : D, search_for_excelfiles
+D, [2016-02-08T11:05:10.330588 #19696] DEBUG -- : D, doGetRequest
+D, [2016-02-08T11:05:10.330588 #19696] DEBUG -- : D, do_http
+D, [2016-02-08T11:08:06.630064 #19696] DEBUG -- : D, set_excelfile_and_session
+D, [2016-02-08T11:08:08.602691 #19696] DEBUG -- : T Inside list worksheets
+D, [2016-02-08T11:08:08.603193 #19696] DEBUG -- : D, list_objects
+D, [2016-02-08T11:08:08.603193 #19696] DEBUG -- : D, doGetRequest
+D, [2016-02-08T11:08:08.603687 #19696] DEBUG -- : D, do_http
+D, [2016-02-08T11:08:11.059436 #19696] DEBUG -- : T [#<ExcelRubyEasy::Model::Worksheet:0x337d058 @position=0, @name="Sheet1", @id="{00000000-0001-0000-0000-000000000000}", @visibility="Visible">, #<ExcelRubyEasy::Model::Worksheet:0x337cff8 @position=1, @name="AnalysisData", @id="{00000000-0001-0000-0100-000000000000}", @visibility="Visible">, #<ExcelRubyEasy::Model::Worksheet:0x337cf68 @position=2, @name="Sheet77028", @id="{00000000-0001-0000-0200-000000000000}", @visibility="Visible">]
+D, [2016-02-08T11:08:14.331411 #19696] DEBUG -- : D, get_worksheet
+D, [2016-02-08T11:08:14.331911 #19696] DEBUG -- : D, doGetRequest
+D, [2016-02-08T11:08:14.331911 #19696] DEBUG -- : D, do_http
+D, [2016-02-08T11:08:17.870701 #19696] DEBUG -- : D, delete
+D, [2016-02-08T11:08:17.870701 #19696] DEBUG -- : D, do_http
