@@ -139,8 +139,6 @@ class Client
 
 	def self.create_sessionid(persistChanges=nil)
 
-		return true
-		#logger.debug "D, #{__method__.to_s}, #{persistChanges} "
 		persistChanges = ExcelRubyEasy::Client.persist_changes
 
 		uri = URI.parse(ExcelRubyEasy::Client.excelserver + 'CreateSession')
@@ -149,9 +147,6 @@ class Client
 			persistChanges: persistChanges
 		}
 		
-        puts
-        puts "!!! #{ExcelRubyEasy::HEADERS_POST_BASIC["Authorization"]}"
-        puts
 		request = Net::HTTP::Post.new(uri.request_uri, ExcelRubyEasy::HEADERS_POST_BASIC)
 		response = ExcelRubyEasy::HttpAction::http_sync_with_body(uri, request, parms.to_json, false)
 		j = JSON.parse(response.body, {:symbolize_names => true}) 
@@ -159,6 +154,7 @@ class Client
 		ExcelRubyEasy::HEADERS_PATCH["Workbook-Session-Id"] = j[:id]
 		ExcelRubyEasy::HEADERS_DELETE["Workbook-Session-Id"] = j[:id]
 		ExcelRubyEasy::HEADERS_GET["Workbook-Session-Id"] = j[:id]
+		ExcelRubyEasy::HEADERS_GET_ALL["Workbook-Session-Id"] = j[:id]		
 
 		ExcelRubyEasy::Client.session_id = j[:id] 
 		#logger.debug "Returning "
@@ -171,11 +167,7 @@ class Client
 		}
 		request = Net::HTTP::Post.new(uri.request_uri, ExcelRubyEasy::HEADERS_POST)
 		response = ExcelRubyEasy::HttpAction::http_sync_with_body(uri, request, parms.to_json)
-	    if response.kind_of? Net::HTTPSuccess
-			puts "====================> Session Refreshed"
-			puts "Header value: #{ExcelRubyEasy::HEADERS_POST["Workbook-Session-Id".to_sym]}"
-	    else
-	        puts "!!!!!!====================> Session Refresh failed. resetting session id header"
+	    if !response.kind_of? Net::HTTPSuccess
 	        raise ExcelRubyEasy::ClientError.new
 	    end		
 		return 
