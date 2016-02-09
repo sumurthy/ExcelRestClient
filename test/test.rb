@@ -9,12 +9,12 @@ logger.level = Logger::DEBUG
 
 SESSION = {
         client_id: "dad4b481-a6b7-4cfd-9117-32eed770d4b1",
-        redirect_uri: "http://localhost:4567/signon",
+        redirect_uri: "http://excelrest1.cloudapp.net/signon",
         secret: "AGCifRyMSOMNQr5n36Kb9Pzh0U4oR8cfKQwjXv39ip0=",
         auth_url: "login.windows.net/common/oauth2/",
         resource: "https://graph.microsoft.com",
         persist_changes: true
-        }
+}
 
 
 client = ExcelRubyEasy::Client.new (SESSION)
