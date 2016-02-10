@@ -17,6 +17,7 @@ SESSION = {
 }
 
 
+
 client = ExcelRubyEasy::Client.new (SESSION)
 auth_url = client.get_authurl
 
@@ -25,7 +26,8 @@ auth_url = client.get_authurl
 #
 
 set :bind, '0.0.0.0'
-
+set :sessions, true
+set :session_secret, 'Q1W2E3R4'
 
 get '/' do 
 	logger.debug "T inside Main Page"
