@@ -1,22 +1,3 @@
-# Logfile created on 2016-02-09 10:56:32 -0800 by logger.rb/44203
-D, [2016-02-09T10:56:33.436192 #5756] DEBUG -- : D, get_authurl
-D, [2016-02-09T10:56:33.436192 #5756] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
-D, [2016-02-09T10:56:51.263169 #5756] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLQLOSIQbM7riF36KRjYgAQ-DtjuV9Zsg32eQvbTmjmQiRcFUEUbasRWir7P_eP-Asyu--n5lkyFWbUBGlO9qicl09uw7_1B9UZRGNIw2zPD2OwKR2m4q5FrDP1CWsAyQ6bsdNHje84NBB_R6aJsUeW78aqabKznECQ5KsONhdTbj7sznYDK1l-aSGVz2SVCQNNjyFsWzgb40vhniGh2Mo_WiU2ZtWpAN2Hv5qqKB5hrzcxbBQMsFz4Hfkj_qWIYxtDmie_91Uy7rqZ1t9SWuVegI6Xu16-htaUl9oxhRpeaQAW7C9BiaIjBMhOofzmILQ5hu7bqTJHsZJ9GA3d3Dmw5Z5oSFGJqaDan_4jrF3biIpprFqZFZpt8BZzg9Ss4EoC6zaQG9_2xE5YJwahNkL1LmiRozJNmmGj1BnTf-ic2bGXkwtkJErLgpRKPDCurGnAzf3WyqRfMMtKvh9y36_kEvoO5LDrn7P06UroqZOcHEXdhcjaZWYRgErnx27X8j8vcYDroDiTIH1GYnoTuwCKXNaxwONFuv5isImPFs1eAeYRf972gRIYC2ED93fai3ztQRyIu3p1k-pqFKDstHw4ggAA 
-D, [2016-02-09T10:56:51.312179 #5756] DEBUG -- : D, 1) calling auth token 
-D, [2016-02-09T10:56:51.312179 #5756] DEBUG -- : D, http_sync_with_body
-D, [2016-02-09T10:56:51.312179 #5756] DEBUG -- : D, http_sync_with_body
-D, [2016-02-09T10:56:51.312179 #5756] DEBUG -- : D, do_http
-D, [2016-02-09T10:56:51.970748 #5756] DEBUG -- : D, 2) ending auth token 
-D, [2016-02-09T10:56:51.970748 #5756] DEBUG -- : D,Returning 
-D, [2016-02-09T10:56:51.970748 #5756] DEBUG -- : D, search_for_excelfiles
-D, [2016-02-09T10:56:51.970748 #5756] DEBUG -- : D, doGetRequest
-D, [2016-02-09T10:56:51.970748 #5756] DEBUG -- : D, do_http
-D, [2016-02-09T10:57:09.698817 #5756] DEBUG -- : D, set_excelfile_and_session
-D, [2016-02-09T10:57:09.698817 #5756] DEBUG -- : D, http_sync_with_body
-D, [2016-02-09T10:57:09.698817 #5756] DEBUG -- : D, http_sync_with_body
-D, [2016-02-09T10:57:09.698817 #5756] DEBUG -- : D, do_http
-D, [2016-02-09T10:57:24.313725 #5756] DEBUG -- : T Inside list worksheets
-D, [2016-02-09T10:57:24.313725 #5756] DEBUG -- : D, list_objects
-D, [2016-02-09T10:57:24.313725 #5756] DEBUG -- : D, doGetRequest
-D, [2016-02-09T10:57:24.313725 #5756] DEBUG -- : D, do_http
-D, [2016-02-09T10:57:26.061844 #5756] DEBUG -- : T [#<ExcelRubyEasy::Model::Worksheet:0x31b68b8 @position=0, @name="Sheet1", @id="{F7C2A1CA-93EB-4FAC-B568-0E8334527A36}", @visibility="Visible">]
+# Logfile created on 2016-02-12 03:44:40 -0800 by logger.rb/44203
+D, [2016-02-12T03:44:41.721581 #6764] DEBUG -- : D, get_authurl
+D, [2016-02-12T03:44:41.721581 #6764] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Fexcelrest1.cloudapp.net%2Fsignon&prompt=consent

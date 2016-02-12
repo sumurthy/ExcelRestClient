@@ -27,7 +27,7 @@ module ExcelRubyEasy
 
 		def update()
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      	
-			uri = URI.parse(ExcelRubyEasy::Client.excelserver+"Tables('#{@tableId}')/Columns(#{@id})")
+			uri = URI.parse(ExcelRubyEasy::Client.excelserver+"Tables('#{@tableId}')/Columns('#{@id}')")
 	        parms = {
 				values: @values, 
 	        }
@@ -42,7 +42,7 @@ module ExcelRubyEasy
 
 		def delete
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      		      	
-			uri = URI.parse(ExcelRubyEasy::Client.excelserver+"Tables('#{@tableId}')/Columns(#{@id})")
+			uri = URI.parse(ExcelRubyEasy::Client.excelserver+"Tables('#{@tableId}')/Columns('#{@id}')")
 	        request = Net::HTTP::Delete.new(uri.request_uri, ExcelRubyEasy::HEADERS_DELETE)
 	        response = ExcelRubyEasy::HttpAction::do_http(uri, request)	        
 	     	if response.kind_of? Net::HTTPSuccess
@@ -74,7 +74,7 @@ module ExcelRubyEasy
 
 		def get_databodyrange
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"		 
-			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns(#{@id})/DataBodyRange")
+			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns('#{@id}')/DataBodyRange")
 		    REQUEST_RESPONSE_SAVE["req"] = REQUEST_RESPONSE["req"]
 		    REQUEST_RESPONSE_SAVE["res"] = REQUEST_RESPONSE["res"]
 
@@ -84,7 +84,7 @@ module ExcelRubyEasy
 
 		def get_headerrowrange
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"		 
-			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns(#{@id})/HeaderRowRange")
+			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns('#{@id}')/HeaderRowRange")
 		    REQUEST_RESPONSE_SAVE["req"] = REQUEST_RESPONSE["req"]
 		    REQUEST_RESPONSE_SAVE["res"] = REQUEST_RESPONSE["res"]
 
@@ -94,7 +94,7 @@ module ExcelRubyEasy
 
 		def get_totalrowrange
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"		 
-			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns(#{@id})/TotalRowRange")
+			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns('#{@id}')/TotalRowRange")
 		    REQUEST_RESPONSE_SAVE["req"] = REQUEST_RESPONSE["req"]
 		    REQUEST_RESPONSE_SAVE["res"] = REQUEST_RESPONSE["res"]
 
