@@ -170,7 +170,7 @@ module ExcelRubyEasy
 
 		def get_column(id=nil)
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"		 
-			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@id}')/Columns(#{id})")
+			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@id}')/Columns('#{id}')")
 			parms = {
 				id: j[:id],
 				name: j[:name],

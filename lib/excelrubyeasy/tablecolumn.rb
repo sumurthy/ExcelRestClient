@@ -17,7 +17,7 @@ module ExcelRubyEasy
 
 		def get_range()
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"		 
-			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns(#{index})/Range")
+			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Tables('#{@tableId}')/Columns('#{@id}')/Range")
 		    REQUEST_RESPONSE_SAVE["req"] = REQUEST_RESPONSE["req"]
 		    REQUEST_RESPONSE_SAVE["res"] = REQUEST_RESPONSE["res"]
 
