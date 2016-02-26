@@ -7,7 +7,7 @@ module ExcelRubyEasy
 	class Chart 
 
 		attr_accessor :height, :left, :name, :top, :width, :id
-		attr_reader :worksheetid
+		attr_reader :worksheetid, :worksheetname
 
 		def initialize (parms={}) 
 			@height = parms[:height]
@@ -17,6 +17,7 @@ module ExcelRubyEasy
 			@top = parms[:top]		
 			@width = parms[:width]
 			@worksheetid = parms[:worksheetid]
+			@worksheetname = parms[:worksheetname]
 		end
 		
 		# Return base64 string

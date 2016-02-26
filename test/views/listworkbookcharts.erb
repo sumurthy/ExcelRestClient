@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Excel REST Testing Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Microsoft Excel REST Graph API Explorer</h3>
+      </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">List of charts in the workbook</div>
+      <!-- chart -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Width</th>
+            <th>left</th>
+            <th>Top</th>  
+            <th>Update</th>  
+            <th>Delete</th>                                    
+            <th>Get Image</th>  
+          </tr>          
+        </thead>
+        <tbody>
+          <% charts.each_with_index do |row, i| %>
+            <tr>
+             <th scope="row"><%= i %></th> 
+             <td><%= row.name %></td>
+             <td><%= row.height %></td>
+             <td><%= row.width %></td>
+             <td><%= row.left %></td>
+             <td><%= row.top %></td>             
+             <td><a href="chartupdate?sheetname=<%= row.worksheetname %>&amp;id=<%= URI.escape(row.id) %>"> <i>Go
+             <td><a href="chartdeleteroute?sheetname=<%= row.worksheetname %>&amp;id=<%= URI.escape(row.id) %>"> <i>Go</i> </a></td>
+             <td><a href="downloadimage?sheetname=<%= row.worksheetname %>&amp;id=<%= URI.escape(row.id) %>"> <i>Go</i> </a></td>          
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+  <div class="container"/>
+  
+      <!-- HTTP Trace -->    
+    <%= erb(:httptrace, {}, locals) %>        
+    <!-- End HTTP Trace -->        
+  </div>
+
+
+      <footer class="footer">
+        <p>&copy; Microsoft 2014</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

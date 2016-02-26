@@ -80,7 +80,8 @@ module ExcelRubyEasy
 				top: j[:top],   
 				width: j[:width],
 				id: j[:id],
-				worksheetid: @id
+				worksheetid: @id,
+				worksheetname: @name
 			}			
 			return ExcelRubyEasy::Model::Chart.new(parms)
 		end
@@ -98,7 +99,8 @@ module ExcelRubyEasy
 					top: item[:top],   
 					width: item[:width],
 					id: item[:id], 
-					worksheetid: @id  					  
+					worksheetid: @id,
+					worksheetname: @name
 				}
 				return_array << ExcelRubyEasy::Model::Chart.new(parms)
 			end
@@ -173,7 +175,8 @@ module ExcelRubyEasy
 				name: j[:name],
 				top: j[:top], 
 				width: j[:width],
-				worksheetid: @id
+				worksheetid: @id,
+				worksheetname: @name
 			}
 			return ExcelRubyEasy::Model::Chart.new(parms)  
 		end

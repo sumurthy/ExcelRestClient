@@ -334,6 +334,35 @@ class Client
 		return ExcelRubyEasy::Model::Range.new(parms)
 	end	 
 
+	def list_workbook_charts(worksheets=[])
+		return_array = []
+		worksheets.each do |ws|
+			puts
+			puts "Reading chart for #{ws.name}" 
+			puts
+			j = ExcelRubyEasy::HttpAction::doGetRequest (ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape ws.id}')/Charts")
+			response_array = j[:value]
+			parms={}
+			response_array.each do |item|
+				parms = {		
+					height: item[:height],
+					left: item[:left],
+					name: item[:name],
+					top: item[:top],   
+					width: item[:width],
+					id: item[:id], 
+					worksheetid: ws.id,
+					worksheetname: ws.name  					  
+				}
+				return_array << ExcelRubyEasy::Model::Chart.new(parms)
+			end
+		end
+		puts '*********************'
+		puts return_array
+		puts '*********************'		
+		return return_array
+	end
+
 	def get_worksheet(id=nil, name=nil)
 			ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      		      	
 			if !id.nil?

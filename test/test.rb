@@ -61,21 +61,57 @@ end
 get '/listworksheets' do 
 	ExcelRubyEasy::logger.debug "T Inside list worksheets"
 	begin
-		@@sheets = client.list_objects("Worksheets")
+		sheets = client.list_objects("Worksheets")
 		saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE
-		ExcelRubyEasy::logger.debug "T #{@@sheets.to_s}"
-		erb :listworksheets, :locals => {:sheets => @@sheets, :rr => saveRR } 
+		erb :listworksheets, :locals => {:sheets => sheets, :rr => saveRR } 
 	rescue Exception => e 
-		ExcelRubyEasy::logger.warn "ERROR!! #{e.to_s}"
-		redirect "/?htrace=none&status=Error-List-Worksheets"
+		saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE
+		#redirect "/?htrace=none&status=Error-List-Worksheets"
+		erb :index, :locals => {:status => "Error-Reading-Worksheets",
+								:htrace => "none",
+								:rr => saveRR
+							   }		
 	end
+end
+
+get '/listworkbookcharts' do 
+
+	puts 
+	puts "List all charts"
+	puts
+	# begin
+		sheets = client.list_objects("Worksheets")		
+		puts "#{sheets}"
+		puts '--->0'		
+		charts = client.list_workbook_charts(sheets)
+		puts '--->1'
+		puts charts
+		puts '--->2'
+		saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE
+		erb :listworkbookcharts, :locals => {:charts => charts, :rr => ExcelRubyEasy::REQUEST_RESPONSE}
+	# rescue Exception => e 
+	# 	saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE
+	# 	#redirect "/?htrace=none&status=Error-List-Worksheets"
+	# 	erb :index, :locals => {:status => "Error-Reading-Workbook-Charts",
+	# 							:htrace => "ok",
+	# 							:rr => saveRR
+	# 						}
+	# end
 end
 
 get '/listtables' do 
 	logger.debug "T Inside list tables"
-	@@tables = client.list_objects("Tables")
-	saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE_LIST
-	erb :listtables, :locals => {:tables => @@tables, :status => params[:status], :rr => saveRR } 
+	begin
+		@@tables = client.list_objects("Tables")
+		saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE_LIST
+		erb :listtables, :locals => {:tables => @@tables, :status => params[:status], :rr => saveRR } 
+	rescue Exception => e 
+		saveRR = ExcelRubyEasy::REQUEST_RESPONSE_SAVE
+		erb :index, :locals => {:status => "Error-While-Listing-Tables",
+								:htrace => "ok",
+								:rr => saveRR
+							   }
+	end	
 	# out = "<center> <h3> Click <a href=#{auth_url}> here </a> to access file browser </h3></center> "
 end
 
