@@ -119,7 +119,7 @@ module ExcelRubyEasy
 	        when 200...300
 	          nil
 	        when 301, 302, 303, 307
-	          message ||= sprintf('Redirect to %s', header[:location]) 
+	          message ||= 'The Excel is open. Close and try again, HTTP code: ' + status.to_s
 	          raise ExcelRubyEasy::RedirectError.new(message, status_code: status, header: header, body: body)
 	        when 401
 	          message ||= 'Unauthorized, HTTP code: ' + status.to_s
@@ -131,7 +131,7 @@ module ExcelRubyEasy
 	          message ||= 'Server error, HTTP code: ' + status.to_s
 	          raise ExcelRubyEasy::ServerError.new(message, status_code: status, header: header, body: body)
 	        else
-	          ExcelRubyEasy::logger.warn(sprintf('Encountered unexpected status code %s', status))
+	          ExcelRubyEasy::logger.warn("Encountered unexpected status code #{status.to_s}")
 	          message ||= 'Unknown error, HTTP code: ' + status.to_s
 	          raise ExcelRubyEasy::TransmissionError.new(message, status_code: status, header: header, body: body)
 	        end
