@@ -1,35 +1,37 @@
    <div class="container">
           <% require 'json' %>
     <div class="panel panel-default">
-      <div class="panel-heading"><center> HTTP TRACE Data: </center></div>
+      <div class="panel-heading"><center> <b> HTTP Trace </b> </center></div>
       <div class="panel-body">
       <% myClass = "alert alert-info" %>
       <% myClass = "alert alert-danger" if (rr["res"].code.to_i > 299) %>
-
+      Request path  <br/>
       <div class="<%= "#{myClass}" %>" role="alert"><b><%= "#{rr["req"].method}   #{rr["req"].path.split('_api').last}" %></b></div>
-      <div class="<%= "#{myClass}" %>" role="alert">
+       Request headers <br/>
+      <div class="<%= "#{myClass}" %>" role="alert">      
         <% rr["req"].to_hash.each do |key, val| %>
-          <%= "<b>#{key}</b>: #{val[0]} </br>" %>
+          <%= "<b>#{key}</b>: #{val[0][0,30]} </br>" %>
         <% end %>
       </div>
 
         <% if rr["req"].body.to_s.empty? %>
           <div class="<%= "#{myClass}" %>" role="alert"><b> Empty request body </b></div>
         <% else %>
-
+          <b> Request path </b> <br/>
           <div class="<%= "#{myClass}" %>" role="alert"><%= JSON.pretty_generate JSON.parse(rr["req"].body) %></div>
         <% end %>              
 
-
-      <div class="<%= "#{myClass}" %>" role="alert"><b>HTTP Response Code: <%= "#{rr["res"].code.to_i}, #{rr["res"].message}" %></b>
+         Response  <br/>
+      <div class="<%= "#{myClass}" %>" role="alert"><b>HTTP code: <%= "#{rr["res"].code.to_i}, #{rr["res"].message}" %></b>
       </div>
-
+       Response headers <br/>
       <div class="<%= "#{myClass}" %>" role="alert">
         <% rr["res"].to_hash.each do |key, val| %>
-          <%= "<b>#{key}</b>: #{val[0]} </br>" %>
+          <%= "<b>#{key}</b>: #{val[0][0,30]} </br>" %>
       <% end %> 
       </div>
         <% if !rr["res"].body.nil? %>
+          Response body  <br/>
           <div class="<%= "#{myClass}" %>" role="alert"><xmp><%= JSON.pretty_generate JSON.parse(rr["res"].body) %></xmp></div>
         <% else %>
           <div class="<%= "#{myClass}" %>" role="alert">Empty response body.</div>

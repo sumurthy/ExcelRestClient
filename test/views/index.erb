@@ -65,7 +65,7 @@
 		  <a href="listnames" class="list-group-item">List</a>
     </div>
 
-     <div class="alert alert-warning alert-dismissible" role="alert">
+     <div class="alert alert-success" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
      <strong> Excel session type being used: <% if ExcelRubyEasy::Client.persist_changes %>
               Persist changes 
@@ -74,10 +74,10 @@
               <% end %>
               <br/>
 
-     
-     <%= "Excel File id: #{ExcelRubyEasy::Client.excelfileid}" %>
      <br/>
-      <%= "Session id: #{ExcelRubyEasy::Client.session_id}" %> 
+     <%= "Excel File id: #{ExcelRubyEasy::Client.excelfileid}" %>
+     <br/><br/>
+     <!--  <%= "Session id: #{ExcelRubyEasy::Client.session_id}" %>  -->
      </strong> 
     </div>
 
