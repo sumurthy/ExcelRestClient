@@ -75,7 +75,7 @@
               <br/>
 
      <br/>
-     <%= "Excel File id: #{ExcelRubyEasy::Client.excelfileid}" %>
+     <%= "File id of the Excel workbook you are using: #{ExcelRubyEasy::Client.excelfileid}" %>
      <br/><br/>
      <!--  <%= "Session id: #{ExcelRubyEasy::Client.session_id}" %>  -->
      </strong> 
@@ -86,7 +86,7 @@
     <% if status.include? ('Error')  %>
       <div class="alert alert-danger" role="alert"><%= status %></div>  
     <% elsif status.include? ('Warning')  %>
-      <div class="alert alert-danger" role="alert"><%= status %></div>
+      <div class="alert alert-warning" role="alert"><%= status %></div>
     <% elsif (status != 'none') %>
       <div class="alert alert-success" role="alert"><%= status %></div>      
     <% end %>

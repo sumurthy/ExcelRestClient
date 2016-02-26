@@ -41,8 +41,21 @@ get '/signon' do
 end
 
 get '/setexcelfile' do 
-	client.set_excelfile_and_session(params[:id]) 
-	erb :index, :locals => {:status => params[:status], :htrace => "none"} 
+	begin
+		client.set_excelfile_and_session(params[:id]) 
+		saveRR = ExcelRubyEasy::REQUEST_RESPONSE	
+		erb :index, :locals => {:status => params[:status], :htrace => "ok", :rr => saveRR} 
+	rescue Exception => e 
+		saveRR = ExcelRubyEasy::REQUEST_RESPONSE	
+		if e.status_code == 307
+			redirect "/?htrace=none&status=#{e.message}"
+		else
+			erb :index, :locals => {:status => "Error-While-Creating-Session",
+									:htrace => "none",
+									:rr => saveRR
+								   }
+		end
+	end	
 end
 
 get '/listworksheets' do 

@@ -119,7 +119,7 @@ module ExcelRubyEasy
 	        when 200...300
 	          nil
 	        when 301, 302, 303, 307
-	          message ||= 'The Excel is open. Close and try again, HTTP code: ' + status.to_s
+	          message ||= 'Warning: The Excel file is open in edit mode elsewhere. You may experience issues. HTTP code: ' + status.to_s
 	          raise ExcelRubyEasy::RedirectError.new(message, status_code: status, header: header, body: body)
 	        when 401
 	          message ||= 'Unauthorized, HTTP code: ' + status.to_s
