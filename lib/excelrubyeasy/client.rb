@@ -139,6 +139,7 @@ class Client
 
 	def self.create_sessionid(persistChanges=nil)
 
+		return
 		persistChanges = ExcelRubyEasy::Client.persist_changes
 
 		uri = URI.parse(ExcelRubyEasy::Client.excelserver + 'CreateSession')
