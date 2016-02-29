@@ -17,7 +17,7 @@
         <% if rr["req"].body.to_s.empty? %>
           <div class="<%= "#{myClass}" %>" role="alert"><b> Empty request body </b></div>
         <% else %>
-          <b> Request path </b> <br/>
+          <b> Request body </b> <br/>
           <div class="<%= "#{myClass}" %>" role="alert"><%= JSON.pretty_generate JSON.parse(rr["req"].body) %></div>
         <% end %>              
 

@@ -29,7 +29,12 @@ end
 
 get '/go' do 
 	logger.debug "T inside Main Page"
-	erb :go, :locals => {:authrUrl => auth_url} 
+	erb :go
+end
+
+get '/start' do 
+	logger.debug "T inside Main Page"
+	erb :start, :locals => {:authrUrl => auth_url} 
 end
 
 get '/signon' do 
@@ -609,9 +614,18 @@ end
 
 get '/addrows' do 
 	
+
+	hdr = []
+	table = client.get_table(nil, params[:tablename])
+	if table.showHeaders
+		headerrowrange = table.get_headerrowrange 		
+		hdr = headerrowrange.values[0]
+	end	
+
 	erb :addrows, :locals => {:tablename => params[:tablename], 
 							  :cols => params[:cols],
-							  :rows => params[:rows]
+							  :rows => params[:rows],
+							  :hdr => hdr
 							 }  
 end
 

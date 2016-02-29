@@ -58,8 +58,11 @@
         <tbody>
         <%= "<tr>" %>
           <% cols.to_i.times  do |col| %>
-
+              <% if hdr.length > 0 %>
+                <%= "<td><input type=\"text\" name=cell#{col}  class=\"form-control\" placeholder=\"#{hdr[col]}\"/></td>" %> 
+              <% else %>
                 <%= "<td><input type=\"text\" name=cell#{col}  class=\"form-control\" placeholder=\"Cell: 0, #{col.to_s}\"/></td>" %> 
+              <% end %>
 
           <% end %>
         <%= "</tr>" %>
