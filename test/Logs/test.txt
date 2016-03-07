@@ -1,34 +1,3 @@
-# Logfile created on 2016-02-29 14:10:06 -0800 by logger.rb/44203
-D, [2016-02-29T14:10:08.866635 #13956] DEBUG -- : D, get_authurl
-D, [2016-02-29T14:10:08.867132 #13956] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
-D, [2016-02-29T14:10:57.187003 #13956] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLdImt5yZyUkLa0H5IxQyg_BHv_mU0R0wBc0o8XpMrdLoCVfd0dl0gcRookmsm9naZFm1L-sikotdGpXwJoU4edjMpYiR8JHN-y1UUXO3Lt5mGJv73iqTUAsWicks2eGL4gX4xlb1mq5pntdt3LrA9bo7SiDZwm7phE_B0lMROI2R08ODQm8lS5VV-6xqPQ656fu-FjCxSx7fCL8dIp3OPh87eVf54miMviUNWIYbTysP0MyX83lgVAWN98na6OtU9Lwnovk4wOMDWsrHw8PLOKAMZZSX-FNlaTROmCA1_s-4O67L__HUPZ3CysX2ozsdAZN7ZkilJZXIs8la9kGXcZjp5fR9sjY3F_O6IDFvBZT62ZITQAn3j7Eyw_CsArUXVIgG0cfbQJg7gM4QoIs-jQv3XFvoFSnBbRfR2bnY6pXK4AXaL9qWlIUFp9206BnjUYEfH7Yob2l52Wl27UDn0Ol-a2OP_MW6QvTNZNge-jaBOq7sJjDb4eBoRKe30VTmLheFWcgt1a7sktzCYQ5ipmcgAA 
-D, [2016-02-29T14:10:57.224423 #13956] DEBUG -- : D, 1) calling auth token 
-D, [2016-02-29T14:10:57.224423 #13956] DEBUG -- : D, http_sync_with_body
-D, [2016-02-29T14:10:57.224931 #13956] DEBUG -- : D, http_sync_with_body
-D, [2016-02-29T14:10:57.224931 #13956] DEBUG -- : D, do_http
-D, [2016-02-29T14:10:57.816344 #13956] DEBUG -- : D, 2) ending auth token 
-D, [2016-02-29T14:10:57.821353 #13956] DEBUG -- : D,Returning 
-D, [2016-02-29T14:10:57.821353 #13956] DEBUG -- : D, search_for_excelfiles
-D, [2016-02-29T14:10:57.821353 #13956] DEBUG -- : D, doGetRequest
-D, [2016-02-29T14:10:57.822353 #13956] DEBUG -- : D, do_http
-D, [2016-02-29T14:11:04.025951 #13956] DEBUG -- : D, set_excelfile_and_session
-D, [2016-02-29T14:11:08.893693 #13956] DEBUG -- : D, set_excelfile_and_session
-D, [2016-02-29T14:11:11.814659 #13956] DEBUG -- : T Inside list worksheets
-D, [2016-02-29T14:11:11.815656 #13956] DEBUG -- : D, list_objects
-D, [2016-02-29T14:11:11.815656 #13956] DEBUG -- : D, doGetRequest
-D, [2016-02-29T14:11:11.815656 #13956] DEBUG -- : D, do_http
-D, [2016-02-29T14:28:25.269618 #13956] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLSGoyoI6yaxa7pEKMLG-QPUFEif4JblLW4MrbUiQTrUV2ksc7Myhbwx6VsF5pNdUAiryKuB6C9OM7Q5xweYS40iIhPTdKVKBsL2_RN8swSkMLnriCMNY_zufdvQWAED7CL0u5UXfS6lXQ2QQndChxDfIiBSMhbmcTa-LRRZOftNypprP6NOTk9BqZF7x-Tp8_QQHMWzLTncr0KD_hC9TVm6WhNZycpbKpeCpfiJE6q91RYCx9ylnv4sDcjSOnFv0AAp6cxmVy-sw1mXEOLXyzT235qTCUXrhLWFm57c0sLVMle7hVieaiGeWU9gi8spKMuZ3YX3M-msH0oNg0BVxqcYiGTv3Q-qIQwEQiwQdgCT9SZnJ61XGvNYFF7YUxbUZlDq0m21yT_QXysDwQuvgIcXf8pcREXKItR_cd3FXBcmKlsAHbq7EcYQC8XmsXeWNFTv-RtBDOOX4h28igmVBlK_vY3pCEWHnjS1i76ZRfbiz7i7s9s5gxE6cNwU3nzVrOIRbiOi1-PgHF5cTXPjXSF4gAA 
-D, [2016-02-29T14:28:25.311606 #13956] DEBUG -- : D, 1) calling auth token 
-D, [2016-02-29T14:28:25.311606 #13956] DEBUG -- : D, http_sync_with_body
-D, [2016-02-29T14:28:25.312624 #13956] DEBUG -- : D, http_sync_with_body
-D, [2016-02-29T14:28:25.312624 #13956] DEBUG -- : D, do_http
-D, [2016-02-29T14:28:25.972651 #13956] DEBUG -- : D, 2) ending auth token 
-D, [2016-02-29T14:28:25.973649 #13956] DEBUG -- : D,Returning 
-D, [2016-02-29T14:28:25.973649 #13956] DEBUG -- : D, search_for_excelfiles
-D, [2016-02-29T14:28:25.974652 #13956] DEBUG -- : D, doGetRequest
-D, [2016-02-29T14:28:25.974652 #13956] DEBUG -- : D, do_http
-D, [2016-02-29T14:28:33.618680 #13956] DEBUG -- : D, set_excelfile_and_session
-D, [2016-02-29T14:28:35.854281 #13956] DEBUG -- : D, add_worksheet
-D, [2016-02-29T14:28:35.855046 #13956] DEBUG -- : D, http_sync_with_body
-D, [2016-02-29T14:28:35.855046 #13956] DEBUG -- : D, http_sync_with_body
-D, [2016-02-29T14:28:35.856081 #13956] DEBUG -- : D, do_http
+# Logfile created on 2016-03-06 15:29:48 -0800 by logger.rb/44203
+D, [2016-03-06T15:29:50.653829 #3244] DEBUG -- : D, get_authurl
+D, [2016-03-06T15:29:50.654828 #3244] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent

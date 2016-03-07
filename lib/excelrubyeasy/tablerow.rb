@@ -11,7 +11,6 @@ module ExcelRubyEasy
 			@index = parms[:index]
 			@values = parms[:values]
 			@tableId = parms[:tableId]
-			puts "Inside tablerow add, #{index.to_s}"
 		end
 
 		def get_range()

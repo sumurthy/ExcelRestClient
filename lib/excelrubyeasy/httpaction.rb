@@ -53,7 +53,12 @@ module ExcelRubyEasy
 	#        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 	#        http.ca_file = ExcelAPI::TRUSTED_CERT_FILE
 	        #http.set_debug_output(Logger.new("foo.txt") ) 
-	        http.set_debug_output($stdout)    
+	        
+	# Comment this out if you don't want the HTTP req/resp outputted to $Stdout 
+	        
+	        #http.set_debug_output($stdout)    
+
+
 	        response = http.request(request)
 
 	        ExcelRubyEasy::REQUEST_RESPONSE["req"] = request

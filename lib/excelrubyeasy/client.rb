@@ -63,7 +63,7 @@ class Client
 	# If session is initialized with an auth-code, then it'll 
 	# used to return the access token
 	#
-	def set_access_token(authcodeParam = nil, update_refToken = false) 
+	def set_access_token(authcodeParam = nil, update_refToken = true) 
 		logger.debug "D, #{__method__.to_s}, resource= #{resource}, authcode passed = #{authcodeParam} "
 
 		puts "D, #{__method__.to_s}, url = #{auth_url}, resource= #{resource}, authcode passed = #{authcodeParam} "
@@ -81,10 +81,7 @@ class Client
             "redirect_uri" => @redirect_uri,
             "resource" => @resource
         }
-        # request.set_form_data(params)
-        logger.debug "D, 1) calling auth token "	
         response = ExcelRubyEasy::HttpAction::http_sync_with_body(uri, request, params)
-        logger.debug "D, 2) ending auth token "	
         j = JSON.parse(response.body) 
         @access_token = j['access_token']
         ExcelRubyEasy::TOKEN["token"] = "Bearer " + @access_token
@@ -98,10 +95,43 @@ class Client
         if update_refToken
             @refresh_token = j['refresh_token']
         end
-        logger.debug "D,Returning "
+     	return 
+    end
+
+	def refresh_access_token
+
+		puts "D, #{__method__.to_s}"
+		uri = URI.parse("https://#{auth_url}token")
+        request = Net::HTTP::Post.new(uri.request_uri)
+        resource = resource 
+        params = {
+            "grant_type" => "refresh_token",
+            "client_id" => @client_id,
+            "client_secret" => @secret,
+            "refresh_token" => @refresh_token,
+            "resource" => @resource
+        }
+        response = ExcelRubyEasy::HttpAction::http_sync_with_body(uri, request, params)
+        j = JSON.parse(response.body) 
+        @access_token = j['access_token']
+
+        puts "access_token-2:: #{@access_token}"        
+
+        ExcelRubyEasy::TOKEN["token"] = "Bearer " + @access_token
+		ExcelRubyEasy::HEADERS_POST_BASIC["Authorization"] = ExcelRubyEasy::TOKEN["token"]        
+		ExcelRubyEasy::HEADERS_POST["Authorization"] = ExcelRubyEasy::TOKEN["token"]        
+		ExcelRubyEasy::HEADERS_GET["Authorization"] = ExcelRubyEasy::TOKEN["token"]        
+		ExcelRubyEasy::HEADERS_GET_ALL["Authorization"] = ExcelRubyEasy::TOKEN["token"]        
+		ExcelRubyEasy::HEADERS_PATCH["Authorization"] = ExcelRubyEasy::TOKEN["token"]        
+		ExcelRubyEasy::HEADERS_DELETE["Authorization"] = ExcelRubyEasy::TOKEN["token"]        
+
+        @refresh_token = j['refresh_token']
+
+        puts "Refreshed access token: #{@access_token}"
 
      	return 
     end
+
 
 	def search_for_excelfiles
 		ExcelRubyEasy::logger.debug "D, #{__method__.to_s}"      		      	

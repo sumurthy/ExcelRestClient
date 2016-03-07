@@ -1,0 +1,17 @@
+# Logfile created on 2016-03-06 22:26:40 -0800 by logger.rb/44203
+D, [2016-03-06T22:26:41.000993 #29076] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLa3SJsxM_Q3I8YQ1_zgme3ktnU-G50Ttzci8U-gfkx8TUmzNvgFnnJVqfzRQ0nZwNGzHR__bOmNtRP2FO-c8wtEM24lRDPebrdsIFoFAcNXh-RcviRsYH5AYYZUArpPFvZLLWifI499xToxJ7S5l4RmQcw0KiISdH5G_erc7A028_6Qb8sOvgqwB3nmgFRLjPrhpGhQ1bfqNoaXjDcI6A4M2VSXhjiPAmVrZRYjNBDC1tBMKFV-XlGtm1jIRJs0nWth7fF2mzdgMxzxXLPwdNPzfZ3Ud9fj98DR4cpBY2E3YlECL51-20EPPRssKtApndIqzISqJSUna73MdVZdFLEdheL8ppTO5eMUc2HuRTfigDSLeC1f7BITHxvtv86rVRvRib4oN7_iR5uphC5OW7ePI3vvAVAP9LSjiOX8omFzE_11CN_q7NVTASQ7Eb3ne41gQt-GxMyGdRs1Xba_onKsdMdKc0x_kupR6EfQaRB1F6Pa3pgLOzCY6N5rlMf3_MCAA 
+D, [2016-03-06T22:26:41.083185 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:41.084185 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:41.084185 #29076] DEBUG -- : D, do_http
+D, [2016-03-06T22:26:42.649992 #29076] DEBUG -- : D, set_excelfile_and_session
+D, [2016-03-06T22:26:42.649992 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:42.649992 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:42.649992 #29076] DEBUG -- : D, do_http
+D, [2016-03-06T22:26:45.178657 #29076] DEBUG -- : D, add_table, rangeAddress = Sheet1!A1:D1 
+D, [2016-03-06T22:26:45.179661 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:45.179661 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:45.179661 #29076] DEBUG -- : D, do_http
+D, [2016-03-06T22:26:55.910743 #29076] DEBUG -- : D, add_row, rangeAddress = [["0", "0", "0", "2016-03-06 22:26:55 -0800"]] 
+D, [2016-03-06T22:26:55.911745 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:55.911745 #29076] DEBUG -- : D, http_sync_with_body
+D, [2016-03-06T22:26:55.912744 #29076] DEBUG -- : D, do_http
