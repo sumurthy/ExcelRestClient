@@ -6,7 +6,7 @@
       <% myClass = "alert alert-info" %>
       <% myClass = "alert alert-danger" if (rr["res"].code.to_i > 299) %>
       Request path  <br/>
-      <div class="<%= "#{myClass}" %>" role="alert"><b><%= "#{rr["req"].method}   #{rr["req"].path.split('_api').last}" %></b></div>
+      <div class="<%= "#{myClass}" %>" role="alert"><b><%= "#{rr["req"].method}   #{rr["req"].path.split('_api').last.gsub('testexcel','beta')}" %></b></div>
        Request headers <br/>
       <div class="<%= "#{myClass}" %>" role="alert">      
         <% rr["req"].to_hash.each do |key, val| %>
