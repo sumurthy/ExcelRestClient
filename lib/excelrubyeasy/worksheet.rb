@@ -133,7 +133,7 @@ module ExcelRubyEasy
 
 			#rangeAddress = (@name + '!' + rangeAddress) unless rangeAddress.include?('!')
 
-			uri = URI.parse(ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape @id}')/Tables/$/Add")
+			uri = URI.parse(ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape @id}')/Tables/Add")
 			parms = {
 				address: rangeAddress,
 				hasHeaders: hasHeaders
@@ -156,7 +156,7 @@ module ExcelRubyEasy
 
 		def add_chart(type=nil, sourcedata=nil, seriesby=nil) 
 
-			uri = URI.parse(ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape @id}')/Charts/$/Add")
+			uri = URI.parse(ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape @id}')/Charts/Add")
 			parms = {
 				type: type,
 				sourcedata: sourcedata,

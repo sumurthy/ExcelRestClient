@@ -56,7 +56,7 @@ module ExcelRubyEasy
 	        
 	# Comment this out if you don't want the HTTP req/resp outputted to $Stdout 
 	        
-	        #http.set_debug_output($stdout)    
+	        http.set_debug_output($stdout)    
 
 
 	        response = http.request(request)

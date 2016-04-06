@@ -3,12 +3,9 @@ require_relative 'excelrubyeasy/logging'
 require_relative 'excelrubyeasy/client'
 
 module ExcelRubyEasy
-
-	#EXCEL_SERVER = "https://graph.microsoft.com/testexcel/me/drive/items/01KIA3ZGYNASNDXHVNVBGJYTXYOLMUOHRN/workbook/"
-	EXCEL_BASE = "https://graph.microsoft.com/testexcel/me/drive/items/"
-	#EXCEL_SERVER = "https://graph.microsoft.com/testexcel/me/drive/items/01353TX3BVODPICVWIBJD3UXNY6VC3JVGD/workbook/"
+	EXCEL_BASE = "https://graph.microsoft.com/beta/me/drive/items/"	
 	RESOURCE_PATH = {"path" => ""}
-	ONEDRIVE_SEARCH = "https://graph.microsoft.com/testexcel/me/drive/root/microsoft.graph.search(q='.xlsx')?$select=id,name,size"
+	ONEDRIVE_SEARCH = "https://graph.microsoft.com/beta/me/drive/root/microsoft.graph.search(q='.xlsx')?$select=id,name,size"
 	TOKEN = {"token" => ""}
 
    	HEADERS_PATCH = {

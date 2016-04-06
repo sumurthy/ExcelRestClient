@@ -76,7 +76,7 @@
              <td><a href="listworksheettables?sheetname=<%= row.name %>"> <i>Go</i> </a></td>
              <td><a href="listcharts?sheetname=<%= row.name %>"> <i>Go</i> </a></td>
              <td><a href="addtable?id=<%= URI.escape row.id %>"> <i>Go</i> </a></td>
-             <td><a href="addchart?id=<%= row.id %>"> <i>Go</i> </a></td>             
+             <td><a href="addchart?id=<%= URI.escape row.id %>"> <i>Go</i> </a></td>             
             </tr>
           <% end %>
         </tbody>

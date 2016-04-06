@@ -169,6 +169,7 @@ class Client
 
 	def self.create_sessionid(persistChanges=nil)
 
+
 		persistChanges = ExcelRubyEasy::Client.persist_changes
 
 		uri = URI.parse(ExcelRubyEasy::Client.excelserver + 'CreateSession')
@@ -221,7 +222,7 @@ class Client
 	def add_table(rangeAddress=nil, hasHeaders=true) 
 		ExcelRubyEasy::logger.debug "D, #{__method__.to_s}, rangeAddress = #{rangeAddress} "
 
-		uri = URI.parse(ExcelRubyEasy::Client.excelserver+'Tables/$/Add')
+		uri = URI.parse(ExcelRubyEasy::Client.excelserver+'Tables/Add')
 		parms = {
 			address: rangeAddress,
 			hasHeaders: hasHeaders
