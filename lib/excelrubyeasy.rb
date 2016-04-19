@@ -18,11 +18,13 @@ module ExcelRubyEasy
 			}
    	HEADERS_POST = {
 			"Content-Type" => "Application/Json", 
-	   		"Accept" => "application/Json"
+	   		"Accept" => "application/Json",
+	   		"Accept-Encoding" => "Gzip, deflate"
 			}
    	HEADERS_POST_BASIC = {
 			"Content-Type" => "Application/Json", 
-	   		"Accept" => "Application/Json"
+	   		"Accept" => "Application/Json",
+	   		"Accept-Encoding" => "Gzip, deflate"
 			}
    	HEADERS_GET = {   					
 	   		"Accept" => "Application/Json"
