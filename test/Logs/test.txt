@@ -1,25 +1,10 @@
-# Logfile created on 2016-04-13 12:37:13 -0700 by logger.rb/44203
-D, [2016-04-13T12:37:16.835904 #10812] DEBUG -- : D, get_authurl
-D, [2016-04-13T12:37:16.835904 #10812] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
-D, [2016-04-13T12:39:06.875729 #10812] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLV4LFH97WmmsCuCu089XJBkAiog-5Hc_Lu_FgZYwtN1lA8p-I4ARbPnZSCDIIH5DfZTGFZylK3CkhEFQElw86pCc5FkNYRL9OfrtS4fCALhefaVrmOIHae7IJ2JhbZQnarR_aBePDUezyMKhhjwMe7RmTQkvR7yZojWtEa3TfWCA1TFUFH7G_oj-8JWZWyze9pnlRa6LaoLxQiaXFuuq3otgkOO0YcEqe_zhhkBzl72-vefmIJ6EAf5eYy8N5CG24tc3b3XZ4de382gornfDQXbBve0ahTtBjIE5Gg0rM960dWlyV2PW-tMWf_2DSy6l7mAZ0uuIvExKyeqelJliWBlq-xVKhLg2E_DJm25N29TOdgoJPvgox0i5HFoY6fBemDJCpe5D9JsaqV6AooY30mKmRVKe2bEsCmK8otnwIMWCNM3loesmV2PSv8xLWyNLGsti1s6gcbxAYdCrKmZGz2kUepT6eq8ZYa3t6FaFVcJ42ptomR_bL3w-QkzyWE443xVKnNsgIgwJcMUT3sZqQrJpHL5Y5XqaayFKIyxEfx_pf1Pl68nW0eMER5Cye3kYpeu8Rn1r55J9Kz5duSECcn2qLS0f5yAYjknA2b9al4ci2y9aIGrngX_HYX71CECr5W78iiT22FjsqCzXFzk9I-sBBFjnJiRqR8R-9DuqFIoeOrk0LqCFnZ5f799Q36-jA-qZNC-cl7D3BZHB7MBH19aGCye_yXbzBBOB9cd2eUzPIAA 
-D, [2016-04-13T12:39:06.955307 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:39:06.965816 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:39:06.966314 #10812] DEBUG -- : D, do_http
-D, [2016-04-13T12:39:07.900458 #10812] DEBUG -- : D, search_for_excelfiles
-D, [2016-04-13T12:39:07.903195 #10812] DEBUG -- : D, doGetRequest
-D, [2016-04-13T12:39:07.903195 #10812] DEBUG -- : D, do_http
-D, [2016-04-13T12:40:17.513167 #10812] DEBUG -- : D, set_excelfile_and_session
-D, [2016-04-13T12:40:17.513167 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:40:17.513167 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:40:17.513668 #10812] DEBUG -- : D, do_http
-D, [2016-04-13T12:41:28.936768 #10812] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLfB4mbKTPaxlhJDLh52HlqHKwPb-iX8hocseU18X_59o89X8aq_LstfyynNv0G00BxrSUG4VDA6rY-ZSkQ8C9HkMaHwMj3RMbEWwl8qipnSqUhdxSEySX0-Ba4_LCIiz5bNhHakYQLmg8majcyRKdhzIOaDb9DSjo3LxpUELvRx81Lup1Hnkkqi7KP9x3DgD89a4pT5w9Uq5doezmkzZsPipwRlo2SO_LE8v8RCm0fM7RJKXKp_6-jic5JGCiyQOvbM-FDUnSWi4KKFVmoXSvh3WK2DB9_Jp6J7iBzOquodiuN8PBdp9bbtnC4APyLRhbLdC4RDMjQFkfs2dNtXUtlwGQjK3N4P4fv5z0XoNRN3kRqN_5YdrQRuAVX4UwqunLpEsu-wjDdYuAFcLof4HrBYOVJiVp2LJMxpQ1u7xL_PUisUWS8KomHUCB-i82o7PLEviL5Q_e1VpWyOmya_pFOrgFpmIv_Wxl5zZyEBxMON5NdINHgF_RProa9w6QYTmiLOOUQ6X-eb7BZV5nXYfCLq_Ro-gE22hwi3XSYqP-_XiTeazxcOecGa_PDgXItY8wtWAcjZ5PvI9cCHn2eNQOCcFGLaPsANBtbwOPIrsvyHudOHIG54MMZKF0DOQN9Ve1swrW5ckdScRyV6nw0pxbUsYArdyoY8Pe5DkdqCm2sjv9vr84YZZsuEF10-92RWAGfkma8XaYkk9C22P6AUq0DWdMxlHYicXFZC0gWfLLUe1IAA 
-D, [2016-04-13T12:41:28.987738 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:41:28.987738 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:41:28.988240 #10812] DEBUG -- : D, do_http
-D, [2016-04-13T12:41:29.806052 #10812] DEBUG -- : D, search_for_excelfiles
-D, [2016-04-13T12:41:29.806052 #10812] DEBUG -- : D, doGetRequest
-D, [2016-04-13T12:41:29.806553 #10812] DEBUG -- : D, do_http
-D, [2016-04-13T12:41:39.593158 #10812] DEBUG -- : D, set_excelfile_and_session
-D, [2016-04-13T12:41:39.593658 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:41:39.593658 #10812] DEBUG -- : D, http_sync_with_body
-D, [2016-04-13T12:41:39.593658 #10812] DEBUG -- : D, do_http
+# Logfile created on 2016-04-22 13:15:29 -0700 by logger.rb/44203
+D, [2016-04-22T13:15:32.837243 #13024] DEBUG -- : D, get_authurl
+D, [2016-04-22T13:15:32.837243 #13024] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
+D, [2016-04-22T13:15:52.024602 #13024] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLZvxDhiV9aW6a-ppFjMyIXLVx3RsyTuVW5ZJr4uYE-RRZaBrZhwzyxKBfNA6I_YG_AdsVb6wlqQPWeN-44Ga4GGJ8b7tV9i9txoD_trA4Z_00V91ytvtN9NQTEDeNWm18H1cSNGY1svCcF-jz0YsAMmhpHT4Yckhq-9EYS3XgF7WgjQvMo1osrWPnOASlw8gKSIBfpr8DrKKBRjgtVH3FVg6bFRykiYa7m73ki6E8CdTNrPOYnsOZYWjmnUUAv7s_wz1tTaDZD97MUMaXvLboU-wc8v9jPP2FdtPtpRZhnWFlEhsyWcRA1UgZAdEgiysCiPNaR-tfIuIM_2vhfQh7JrxyW-bDYp6bNmZr5v2LuubZnrWOho50Heyjp3vg2Qu0iIQo1UbJNoqmM50-N8jHXttkx1t8wtohqM5ZVe9svcEHRGVJDrwBg_kCwbJizq52dsPeKQEPlS5ljErety6RC_KMthNTxKsc0ylPm2C6qWMDMtDVG33G0Byq8Pfmo9WnSn4b6I4KBmlomP50xi5_Br07C_wwVIdZoRDCI0KSUkIwrAF4ie3X-UAGYvtB8eZLSi5J2Iqou7ZNu210VZY5Viy13NSYzxoZ6VTWw-U_mlOtqpDnZxqJCjj2KZii5HwayAA 
+D, [2016-04-22T13:15:52.180744 #13024] DEBUG -- : D, http_sync_with_body
+D, [2016-04-22T13:15:52.188765 #13024] DEBUG -- : D, http_sync_with_body
+D, [2016-04-22T13:15:52.188765 #13024] DEBUG -- : D, do_http
+D, [2016-04-22T13:15:53.366672 #13024] DEBUG -- : D, search_for_excelfiles
+D, [2016-04-22T13:15:53.370676 #13024] DEBUG -- : D, doGetRequest
+D, [2016-04-22T13:15:53.370676 #13024] DEBUG -- : D, do_http
