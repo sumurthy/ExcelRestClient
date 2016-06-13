@@ -5,7 +5,8 @@ require_relative 'excelrubyeasy/client'
 module ExcelRubyEasy
 	EXCEL_BASE = "https://graph.microsoft.com/beta/me/drive/items/"	
 	RESOURCE_PATH = {"path" => ""}
-	ONEDRIVE_SEARCH = "https://graph.microsoft.com/beta/me/drive/root/microsoft.graph.search(q='.xlsx')?$select=id,name,size"
+	#ONEDRIVE_SEARCH = "https://graph.microsoft.com/beta/me/drive/root/microsoft.graph.search(q='.xlsx')?$select=id,name,size"
+	ONEDRIVE_SEARCH = "https://graph.microsoft.com/beta/me/drive/root/children?$select=id,name,size"
 	TOKEN = {"token" => ""}
 
    	HEADERS_PATCH = {

@@ -63,7 +63,7 @@ class Client
 	# If session is initialized with an auth-code, then it'll 
 	# used to return the access token
 	#
-	def set_access_token(authcodeParam = nil, update_refToken = true) 
+	def set_access_token(authcodeParam = nil, update_refToken = true, msGrpah=true) 
 		logger.debug "D, #{__method__.to_s}, resource= #{resource}, authcode passed = #{authcodeParam} "
 
 		puts "D, #{__method__.to_s}, url = #{auth_url}, resource= #{resource}, authcode passed = #{authcodeParam} "
@@ -98,7 +98,9 @@ class Client
      	return 
     end
 
-	def refresh_access_token
+
+
+	def refresh_access_token(msGraph = true)
 
 		puts "D, #{__method__.to_s}"
 		uri = URI.parse("https://#{auth_url}token")
