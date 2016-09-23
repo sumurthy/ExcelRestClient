@@ -1,10 +1,21 @@
-# Logfile created on 2016-04-22 13:15:29 -0700 by logger.rb/44203
-D, [2016-04-22T13:15:32.837243 #13024] DEBUG -- : D, get_authurl
-D, [2016-04-22T13:15:32.837243 #13024] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
-D, [2016-04-22T13:15:52.024602 #13024] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AAABAAAAiL9Kn2Z27UubvWFPbm0gLZvxDhiV9aW6a-ppFjMyIXLVx3RsyTuVW5ZJr4uYE-RRZaBrZhwzyxKBfNA6I_YG_AdsVb6wlqQPWeN-44Ga4GGJ8b7tV9i9txoD_trA4Z_00V91ytvtN9NQTEDeNWm18H1cSNGY1svCcF-jz0YsAMmhpHT4Yckhq-9EYS3XgF7WgjQvMo1osrWPnOASlw8gKSIBfpr8DrKKBRjgtVH3FVg6bFRykiYa7m73ki6E8CdTNrPOYnsOZYWjmnUUAv7s_wz1tTaDZD97MUMaXvLboU-wc8v9jPP2FdtPtpRZhnWFlEhsyWcRA1UgZAdEgiysCiPNaR-tfIuIM_2vhfQh7JrxyW-bDYp6bNmZr5v2LuubZnrWOho50Heyjp3vg2Qu0iIQo1UbJNoqmM50-N8jHXttkx1t8wtohqM5ZVe9svcEHRGVJDrwBg_kCwbJizq52dsPeKQEPlS5ljErety6RC_KMthNTxKsc0ylPm2C6qWMDMtDVG33G0Byq8Pfmo9WnSn4b6I4KBmlomP50xi5_Br07C_wwVIdZoRDCI0KSUkIwrAF4ie3X-UAGYvtB8eZLSi5J2Iqou7ZNu210VZY5Viy13NSYzxoZ6VTWw-U_mlOtqpDnZxqJCjj2KZii5HwayAA 
-D, [2016-04-22T13:15:52.180744 #13024] DEBUG -- : D, http_sync_with_body
-D, [2016-04-22T13:15:52.188765 #13024] DEBUG -- : D, http_sync_with_body
-D, [2016-04-22T13:15:52.188765 #13024] DEBUG -- : D, do_http
-D, [2016-04-22T13:15:53.366672 #13024] DEBUG -- : D, search_for_excelfiles
-D, [2016-04-22T13:15:53.370676 #13024] DEBUG -- : D, doGetRequest
-D, [2016-04-22T13:15:53.370676 #13024] DEBUG -- : D, do_http
+# Logfile created on 2016-09-19 09:34:19 -0700 by logger.rb/44203
+D, [2016-09-19T09:34:22.351414 #36300] DEBUG -- : D, get_authurl
+D, [2016-09-19T09:34:22.352414 #36300] DEBUG -- : D, get_authurl,  https://login.windows.net/common/oauth2/authorize?client_id=dad4b481-a6b7-4cfd-9117-32eed770d4b1&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fsignon&prompt=consent
+D, [2016-09-19T09:40:32.127796 #36300] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AQABAAAAAADRNYRQ3dhRSrm-4K-adpCJe05D1tfXfGHcZXM0TymOkP_rg0oTgwDKAaI9AlKttDwGuCxjsrbsLC2JSxEXpfoqQL0pLhcf8Jhf7OlDodUVk6YN2yuY1d3x6G5unQEeaR9-Gdv-A69_I06pQXeGYGtqF1CvejHdWPAnt3vY7koAMHNibCrlGyDteNKL5zIuikq16RJpdcAKHVXxk2ONu515Sp6Lo3ngamXqE0MUI-3YIzyRTxxHmIRZ0tCBaHU-HU3OfJ4JpSFjof_0PM0S7vFbP_im9UWWYJzip4ODfTu6fkxQnZNJ-r8dl9JYzUjg8ClXPRszm1-_KdXXh-D8ujRe4BWTNBXlutjVRGjyScTorU0gjSaJWgpUUCQIH720W7DLCiRmCI_4NUlBhDPm6OBbAmdxgrKuywzQukExMWFE425Ptt0idakMBoUT8Tw9pnxxfg_tF94b1OtoSO9VUgFA7ddmKFFCytm1wOKi2x2-c8Zt-BhAaRBHN2pVd9mjsux2aUFc-_wLND6cfmwbNdI3-fo3qJGpArFk3Cuvob7SsFuI6KAr-olJzt1biQv1bC3zE52wZMBRdxF-FRH0tNOAckVb9TNV3uebRJ-cnkDRYVDf0FMJU0rtH4YTiq8blBZsKU2QwhSm-ET0TA5i8PCtxYObz0eOSvNMqlixoTxq5iqk79DBo0fLDZ7YNyJFT0QsABGqX-h7W9aRu-DnRmV-YAixTCB2vf9fTbSSHiBKVPlSryV5nGu_m4K53fWgnxIT8Ceq_KwS2v1YbsUfgG9ACBAFOsreCfn5fQbkIUlQ4fL9lW3m5AW67t0ejHR6A9QCg1L6GCEuzXWqh8sYcXytIAA 
+D, [2016-09-19T09:40:32.172613 #36300] DEBUG -- : D, http_sync_with_body
+D, [2016-09-19T09:40:32.173112 #36300] DEBUG -- : D, http_sync_with_body
+D, [2016-09-19T09:40:32.173112 #36300] DEBUG -- : D, do_http
+D, [2016-09-19T09:40:33.186841 #36300] DEBUG -- : D, search_for_excelfiles
+D, [2016-09-19T09:40:33.187342 #36300] DEBUG -- : D, doGetRequest
+D, [2016-09-19T09:40:33.187342 #36300] DEBUG -- : D, do_http
+D, [2016-09-19T09:40:33.738108 #36300] DEBUG -- : D, set_access_token, resource= https://graph.microsoft.com, authcode passed = AQABAAAAAADRNYRQ3dhRSrm-4K-adpCJ4gJSxaDfiGRREHGNUpCDHX2yienMzdRLhLx_ZdyfKt2ml8qzcYKxZfb3bJmMAVxKBPGOtd9VwPpBIZzZUwxX3Sy5U7WiW3PILfqXh4snWpKiJDA87ErtyzN72QMGdmgliPAdi9UEcN2I-eNHywQjQDh5thkQ3-0ClBifqFGhyA9VwdIVKGcHAkB4SFLbv8o1VxXCu9bFMlmpB9EK6BEcnwTsIeQmCfinrEwv6oZtfPsXeS_QGp4HimwZ81XNY99rwJrbxDbjXC3AyYGRhBuNBz6_6f-kBUCP7cfWoOG0gppe9NJNj5sMw_l8F0ljtUaQaZrAQQZ-wC_-DoObpCnYvS7549-viVLhMbloMoZgHPI0UzyyprC_gnevU36deXDJdJbEr5RsiUOqCKjZTpldVqi6IhqJq5CnYdLiV_KpNRaoouGgp8EviYxOX_pi7UtFO-xXDwI4Sf4MCrZLne5ABLHX0Bp6crgqmGe3Kkg2FK6vKQAt8_a8SbCofWnfnCnE05ei0DsBLxto9WXmKpcMjJAzEZOH3aGhfQNm2kU-Rz7FUF-xsDuyiKGeuO8Tto4RBlY9f3f0kGCuI2bK3JIgGlZuovkspX8jrqYe5BzvjjDhqi-kIjIg10isSipC19yqAs4CA2zJhruennr7u-_9a9mb8_l5whXVpi56VErbze_hDzeacSbNRSKMum76oCLn4ZctuzBgGhW4A-zGGU3O2InK6Hhf4b29AZIQnmblcNlKBOn1mYQsfQzh91kT7dMHYrhJ3U2p36UPXN8hnaVff2IygSuoUEdXkN4SIHG2mHY4aIKwU2EQVMkXKgANk85rIAA 
+D, [2016-09-19T09:40:33.787614 #36300] DEBUG -- : D, http_sync_with_body
+D, [2016-09-19T09:40:33.788114 #36300] DEBUG -- : D, http_sync_with_body
+D, [2016-09-19T09:40:33.788114 #36300] DEBUG -- : D, do_http
+D, [2016-09-19T09:40:35.067780 #36300] DEBUG -- : D, search_for_excelfiles
+D, [2016-09-19T09:40:35.070278 #36300] DEBUG -- : D, doGetRequest
+D, [2016-09-19T09:40:35.070780 #36300] DEBUG -- : D, do_http
+D, [2016-09-19T09:40:49.516887 #36300] DEBUG -- : D, set_excelfile_and_session
+D, [2016-09-19T09:40:49.517384 #36300] DEBUG -- : D, http_sync_with_body
+D, [2016-09-19T09:40:49.517384 #36300] DEBUG -- : D, http_sync_with_body
+D, [2016-09-19T09:40:49.517884 #36300] DEBUG -- : D, do_http

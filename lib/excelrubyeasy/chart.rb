@@ -24,7 +24,7 @@ module ExcelRubyEasy
 
 		def get_chart_image
 	      	@name = 'Chart' + Random.rand(10000..99999).to_s if (@name.nil? || @name.empty?)		
-			j = ExcelRubyEasy::HttpAction::doGetRequest_base64 (ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape @worksheetid}')/Charts('#{URI.escape @id}')/Image(width=0,height=0,fittingMode='fit')")			
+			j = ExcelRubyEasy::HttpAction::doGetRequest_base64 (ExcelRubyEasy::Client.excelserver + "Worksheets('#{URI.escape @worksheetid}')/Charts('#{URI.escape @name}')/Image(width=0,height=0,fittingMode='fit')")			
 			base64_image = j[:value]			
 			return base64_image
 		end
